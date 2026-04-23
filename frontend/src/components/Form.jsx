@@ -9,7 +9,7 @@ function Form() {
     category: '',
     image: null,
   })
-  const notify =  (message)=>toast(message);
+  const notify = (message) => toast(message);
   const [backendImage, setBackendImage] = useState(null);
 
   const [submitted, setSubmitted] = useState(false)
@@ -315,11 +315,12 @@ function Form() {
 
         <div className="form-actions">
           <span className="note">Please attach a product image before submitting.</span>
-          <button onClick={notify} disabled={!formValues.image} className="submit-button" type="submit">
+          <button disabled={!formValues.image} className="submit-button" type="submit">
             Save Product
           </button>
         </div>
       </form>
+      <ToastContainer />
     </div>
   )
 }
